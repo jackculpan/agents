@@ -14,7 +14,7 @@ Take the user from nothing to "Re-Pricer is connected and I can see my listings 
 
 ## Step 1: connect the MCP server
 
-Check that the `re-pricer` MCP server is available. If its tools are missing, tell the user to run `/mcp`, select `re-pricer`, and sign in. The browser sign-in page also creates the account for new users. Wait for them to finish.
+Check that the `re-pricer` MCP server is available. If its tools are missing, tell the user to run `/mcp`, select `re-pricer`, and sign in. New users must first sign up at https://re-pricer.com. Wait for them to finish.
 
 ## Step 2: OnBuy keys
 
