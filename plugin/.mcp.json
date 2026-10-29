@@ -1,6 +1,8 @@
 {
-  "re-pricer": {
-    "type": "http",
-    "url": "https://re-pricer.com/mcp"
+  "mcpServers": {
+    "re-pricer": {
+      "type": "http",
+      "url": "https://mcp.re-pricer.com/mcp"
+    }
   }
 }
