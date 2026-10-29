@@ -1,0 +1,6 @@
+{
+  "re-pricer": {
+    "type": "http",
+    "url": "https://re-pricer.com/mcp"
+  }
+}

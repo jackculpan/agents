@@ -1,0 +1,14 @@
+{
+  "name": "re-pricer",
+  "owner": { "name": "Re-Pricer", "url": "https://re-pricer.com" },
+  "description": "Re-Pricer for Claude Code: connect your OnBuy account and reprice listings from the terminal.",
+  "plugins": [
+    {
+      "name": "re-pricer",
+      "source": "./plugin",
+      "description": "Sets up Re-Pricer for your OnBuy account, then checks your Buy Box and reprices listings inside your min and max prices.",
+      "version": "0.1.0",
+      "homepage": "https://re-pricer.com/mcp-server"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "re-pricer",
+  "displayName": "Re-Pricer",
+  "version": "0.1.0",
+  "description": "Connect your OnBuy account to Re-Pricer from the terminal. Check the Buy Box and reprice listings within your min and max prices.",
+  "author": { "name": "Re-Pricer", "url": "https://re-pricer.com" },
+  "homepage": "https://re-pricer.com/mcp-server",
+  "repository": "https://github.com/jackculpan/agents",
+  "license": "MIT",
+  "keywords": ["onbuy", "repricer", "pricing", "ecommerce", "buy-box"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
