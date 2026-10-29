@@ -10,6 +10,8 @@ Connect your OnBuy account to [Re-Pricer](https://re-pricer.com) from the termin
 /re-pricer:setup
 ```
 
+Claude Desktop or claude.ai: open Settings, Connectors, Add custom connector, and use `https://mcp.re-pricer.com/mcp`. On Team and Enterprise plans, an owner must add the connector first.
+
 Other AI agents: "Read https://re-pricer.com/setup.md and follow it to set up Re-Pricer for my OnBuy account."
 
 ## What it does

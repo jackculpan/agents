@@ -9,7 +9,7 @@ Take the user from nothing to "Re-Pricer is connected and I can see my listings 
 
 - OnBuy consumer key and secret key are secrets. Never ask for them in chat. The user types them into https://re-pricer.com/api-keys in the browser.
 - `update_listing_prices` changes live prices. Show the SKUs, old prices and new prices. Wait for a clear yes before each call.
-- `update_listing_prices` checks a price against a listing's min and max only when that listing has a floor set. A listing with no floor accepts any price. You cannot see the floors, so you must not guess them.
+- `update_listing_prices` rejects any SKU that has no min price in Re-Pricer, and any price outside the min and max. You cannot see the floors, so you must not guess them.
 - Writing prices may need an active trial or plan. If the tool refuses, tell the user and stop.
 
 ## Step 1: connect the MCP server
@@ -34,7 +34,7 @@ Write the report in plain, short sentences.
 
 ## Step 4: price floors
 
-Automatic repricing only moves a price inside each listing's min and max. A listing with no floor does not reprice.
+Repricing only moves a price inside each listing's min and max. A listing with no floor does not reprice, and manual price updates for it are rejected.
 
 Ask the user for one number: the lowest margin they accept, as a percentage below the current price, or a minimum profit after OnBuy fees. Tell them to set min and max prices in the Re-Pricer dashboard at https://re-pricer.com. Do not guess a floor.
 
