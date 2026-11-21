@@ -14,7 +14,13 @@ Take the user from nothing to "Re-Pricer is connected and I can see my listings 
 
 ## Step 1: connect the MCP server
 
-Check that the `re-pricer` MCP server is available. If its tools are missing, tell the user to run `/mcp`, select `re-pricer`, and sign in. New users must first sign up at https://re-pricer.com. Wait for them to finish.
+Check that the `re-pricer` MCP server is available. If its tools are missing, tell the user how to sign in for their app:
+
+- Claude Code: run `/mcp`, select `re-pricer`, and sign in.
+- Cursor: open Cursor Settings, then MCP, find `re-pricer`, and click "Needs login".
+- ChatGPT or Codex: open the Re-Pricer plugin and click Connect.
+
+New users can sign up on the sign-in page. Wait for them to finish.
 
 ## Step 2: OnBuy keys
 

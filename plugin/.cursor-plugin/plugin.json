@@ -1,0 +1,14 @@
+{
+  "name": "re-pricer",
+  "displayName": "Re-Pricer",
+  "version": "0.2.0",
+  "description": "Check the Buy Box and reprice your OnBuy listings inside your own min and max prices. Connects the Re-Pricer MCP server with OAuth, so no API keys go into chat.",
+  "author": { "name": "Re-Pricer", "email": "info@re-pricer.com" },
+  "homepage": "https://re-pricer.com/mcp-server",
+  "repository": "https://github.com/jackculpan/agents",
+  "license": "MIT",
+  "keywords": ["onbuy", "repricer", "pricing", "ecommerce", "buy-box", "marketplace-seller"],
+  "logo": "assets/logo.png",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

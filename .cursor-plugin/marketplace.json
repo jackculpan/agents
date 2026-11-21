@@ -1,0 +1,14 @@
+{
+  "name": "re-pricer",
+  "owner": { "name": "Re-Pricer", "email": "info@re-pricer.com", "url": "https://re-pricer.com" },
+  "description": "Re-Pricer: check the Buy Box and reprice OnBuy listings from your AI agent.",
+  "plugins": [
+    {
+      "name": "re-pricer",
+      "source": "./plugin",
+      "description": "Check the Buy Box and reprice OnBuy listings inside your own min and max prices.",
+      "version": "0.2.0",
+      "homepage": "https://re-pricer.com/mcp-server"
+    }
+  ]
+}
