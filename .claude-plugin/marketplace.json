@@ -7,7 +7,7 @@
       "name": "re-pricer",
       "source": "./plugin",
       "description": "Sets up Re-Pricer for your OnBuy account, then checks your Buy Box and reprices listings inside your min and max prices.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "homepage": "https://re-pricer.com/mcp-server"
     }
   ]

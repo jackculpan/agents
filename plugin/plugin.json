@@ -1,0 +1,54 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "re-pricer",
+  "version": "0.2.0",
+  "description": "Check the Buy Box and reprice your OnBuy listings inside your own min and max prices.",
+  "author": { "name": "Re-Pricer", "email": "info@re-pricer.com", "url": "https://re-pricer.com" },
+  "homepage": "https://re-pricer.com/mcp-server",
+  "repository": "https://github.com/jackculpan/agents",
+  "license": "MIT",
+  "keywords": ["onbuy", "repricer", "pricing", "ecommerce", "buy-box"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "Re-Pricer",
+        "shortDescription": "Win the OnBuy Buy Box",
+        "longDescription": "Re-Pricer connects your OnBuy seller account to ChatGPT. Ask which listings win the Buy Box, see the gap to the lowest competitor, read price history and competitor data, and change min and max prices. When you ask, it reprices a listing or matches the Buy Box, always inside the min and max price you set. You sign in with OAuth; your OnBuy API keys stay in the Re-Pricer dashboard and never enter the chat. Reading data is free. Changing prices needs a Re-Pricer plan or free trial.",
+        "developerName": "Re-Pricer",
+        "category": "Business",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://re-pricer.com",
+        "supportURL": "https://re-pricer.com/contact",
+        "privacyPolicyURL": "https://re-pricer.com/privacy",
+        "termsOfServiceURL": "https://re-pricer.com/terms",
+        "defaultPrompt": [
+          "Which of my OnBuy listings are losing the Buy Box?",
+          "Show the five listings with the biggest gap to the lowest price",
+          "Set a min price 10% under the current price for SKU ABC-123"
+        ],
+        "brandColor": "#AAFF6A",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            { "prompt": "Which of my OnBuy listings are losing the Buy Box?", "expected": "Calls list_products or check_winning and lists the SKUs that do not win the Buy Box, with the gap to the lowest price." },
+            { "prompt": "Show me my top 5 products by price gap to the Buy Box.", "expected": "Calls list_products and returns a table of 5 SKUs with our price and the lowest competing price." },
+            { "prompt": "What is the price history for SKU DEMO-001?", "expected": "Calls get_price_history for DEMO-001 and summarises the price checks." },
+            { "prompt": "What are my repricer settings?", "expected": "Calls get_repricer_settings and lists the margin bands and repricing options." },
+            { "prompt": "Set the min price of SKU DEMO-001 to 9.99 and the max to 14.99.", "expected": "Asks for confirmation, then calls update_product with min 9.99 and max 14.99 and reports the new values." }
+          ],
+          "negative": [
+            { "prompt": "What is the weather in London today?", "expected": "Does not call any Re-Pricer tool." },
+            { "prompt": "Write me a poem about shopping.", "expected": "Does not call any Re-Pricer tool." },
+            { "prompt": "Reprice my Amazon listings.", "expected": "Does not call a write tool; explains that Re-Pricer reprices OnBuy listings." }
+          ]
+        }
+      }
+    }
+  }
+}
